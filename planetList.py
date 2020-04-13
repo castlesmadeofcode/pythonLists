@@ -22,4 +22,22 @@ rocky_planets = planet_list[slice(4)]
 
 # Being good amateur astronomers, we know that Pluto is now a dwarf planet, so use the del operation to remove it from the end of planet_list.
 del planet_list[-1]
-print(planet_list)
+# print(planet_list)
+
+spacecraft = [
+   ("Cassini", "Saturn"),
+   ("Viking", "Mars"),
+]
+
+
+for planet in planet_list:
+    the_planets_match = False
+    for craft in spacecraft:
+        if planet == craft[1]:
+            
+            the_planets_match = True
+    if the_planets_match:
+        print(f'{planet} has been visited by {craft[0]}')
+    else:
+        print(f'{planet} has not been visited by either')
+            
